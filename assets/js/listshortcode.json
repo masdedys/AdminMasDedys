@@ -1,0 +1,52 @@
+{
+  "code": [
+    {
+      "id": 7,
+      "name": "Loading bar",
+      "tech": "pace.js",
+      "view": "AdminMasDedys/loadingBar/index.html"
+    },
+    {
+      "id": 6,
+      "name": "Image sprites",
+      "tech": "CSS",
+      "view": "AdminMasDedys/imageSprites/index.html"
+    },
+    {
+      "id": 5,
+      "name": "Giving watermark in your article",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/givingWatermarkInYourArticle/index.html"
+    },
+    {
+      "id": 4,
+      "name": "Copy text with one click",
+      "tech": "clipboard.js",
+      "view": "AdminMasDedys/copyTextWithOneClick/index.html"
+    },
+    {
+      "id": 3,
+      "name": "Delete extension in URL",
+      "tech": "htaccess",
+      "view": "AdminMasDedys/deleteExtension/index.html"
+    },
+    {
+      "id": 2,
+      "name": "Number to text with PHP",
+      "tech": "PHP",
+      "view": "AdminMasDedys/numberToTextWithPHP/index.php"
+    },
+    {
+      "id": 1,
+      "name": "MD5 Encryption With Bootstrap 5",
+      "tech": "PHP, MD5, Bootstrap 5",
+      "view": "AdminMasDedys/md5EncryptionWithBootstrap5/index.php"
+    },
+    {
+      "id": 0,
+      "name": "Basic Box Model",
+      "tech": "CSS",
+      "view": "AdminMasDedys/basicBoxModel/index.html"
+    }
+  ]
+}

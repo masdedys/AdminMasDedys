@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+.rangka {
+  width: 900px;
+  height: auto;
+  margin: auto;
+  clear: both;
+}
+.navbar {
+  width: auto;
+  height: 50px;
+  background-color: #edc6c7;
+}
+.carousel {
+  width: auto;
+  height: 250px;
+  background-color: #8528df;
+}
+.gambar1 {
+  width: 50%;
+  height: 250px;
+  background-color: #67e1c9;
+  float: left;
+}
+.gambar2 {
+  width: 50%;
+  height: 250px;
+  background-color: #cc0fd1;
+  float: left;
+}
+.gambar3 {
+  width: 50%;
+  height: 250px;
+  background-color: #199f84;
+  float: left;
+}
+.gambar4 {
+  width: 50%;
+  height: 250px;
+  background-color: #d33d3f;
+  float: left;
+}
+.content2 {
+  width: auto;
+  height: 300px;
+  background-color: #e75cd0;
+  clear: both;
+}
+.footer {
+  width: auto;
+  height: auto;
+}
+.footer1 {
+  width: 25%;
+  height: 250px;
+  background-color: #d41fd9;
+  float: left;
+}
+.footer2 {
+  width: 25%;
+  height: 250px;
+  background-color: #f91881;
+  float: left;
+}
+.footer3 {
+  width: 25%;
+  height: 250px;
+  background-color: #7413d1;
+  float: left;
+}
+.footer4 {
+  width: 25%;
+  height: 250px;
+  background-color: #12a9c8;
+  float: left;
+}
+
+@media (min-width: 250px) and (max-width: 450px) {
+  .rangka {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    clear: both;
+  }
+  .navbar {
+    width: auto;
+    height: 50px;
+    background-color: #edc6c7;
+  }
+  .carousel {
+    width: auto;
+    height: 250px;
+    background-color: #8528df;
+  }
+  .gambar1 {
+    width: 100%;
+    height: 250px;
+    background-color: #67e1c9;
+    clear: both;
+  }
+  .gambar2 {
+    width: 100%;
+    height: 250px;
+    background-color: #cc0fd1;
+    clear: both;
+  }
+  .gambar3 {
+    width: 100%;
+    height: 250px;
+    background-color: #199f84;
+    clear: both;
+  }
+  .gambar4 {
+    width: 100%;
+    height: 250px;
+    background-color: #d33d3f;
+    clear: both;
+  }
+  .content2 {
+    width: auto;
+    height: 300px;
+    background-color: #e75cd0;
+    clear: both;
+  }
+  .footer {
+    width: auto;
+    height: auto;
+  }
+  .footer1 {
+    width: 100%;
+    height: 250px;
+    background-color: #d41fd9;
+    clear: both;
+  }
+  .footer2 {
+    width: 100%;
+    height: 250px;
+    background-color: #f91881;
+    clear: both;
+  }
+  .footer3 {
+    width: 100%;
+    height: 250px;
+    background-color: #7413d1;
+    clear: both;
+  }
+  .footer4 {
+    width: 100%;
+    height: 250px;
+    background-color: #12a9c8;
+    clear: both;
+  }
+}

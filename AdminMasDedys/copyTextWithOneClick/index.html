@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>copy-text-with-one-click-with-clipboardjs | mas_dedys</title>
+    <link rel="shortcut icon" href="img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="content position-absolute top-50 start-50 translate-middle">
+        <h2>Copy text with one click with clipboard.js</h2>
+        <label for="text" class="mb-3">Tulis contoh text yang akan diproses, lalu klik tombol disamping isian tersebut!</label><br />
+        <div class="input-group mb-3">
+          <textarea class="form-control" placeholder="Tulis contoh text disini!" id="foo" name="text_asli"></textarea>
+          <span class="input-group-text" id="basic-addon2">
+            <button class="btn" data-clipboard-target="#foo">
+              <i class="bi bi-clipboard-fill"></i>
+            </button>
+          </span>
+        </div>
+      </section>
+      <section class="credit">
+        <div class="container-fluid fixed-bottom p-4" style="background-color: #e2edff">
+          <div class="row">
+            <div class="col-md">
+              <p class="text-center">Created with <i class="bi bi-cup-hot-fill"></i> and <i class="bi bi-heart-fill"></i> <a href="https://masdedys.github.io/"> by mas_dedys</a>. | &copy; 2023</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- clipboard js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <script>
+      var clipboard = new ClipboardJS(".btn");
+
+      clipboard.on("success", function (e) {
+        alert("Telah tersalin, silahkan paste ^_^");
+        e.clearSelection();
+      });
+
+      clipboard.on("error", function (e) {
+        alert("Gagal tersalin");
+      });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
