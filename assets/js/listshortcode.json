@@ -2,6 +2,12 @@
   "code": [
     {
       "id": 7,
+      "name": "Get data from JSON without database",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/getDataFromJsonWithoutDatabase/index.html"
+    },
+    {
+      "id": 7,
       "name": "Loading bar",
       "tech": "pace.js",
       "view": "AdminMasDedys/loadingBar/index.html"
@@ -39,7 +45,7 @@
     {
       "id": 1,
       "name": "MD5 Encryption With Bootstrap 5",
-      "tech": "PHP, MD5, Bootstrap 5",
+      "tech": "PHP, MD5",
       "view": "AdminMasDedys/md5EncryptionWithBootstrap5/index.php"
     },
     {

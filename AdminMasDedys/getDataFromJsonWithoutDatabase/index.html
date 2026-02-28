@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get data from json | masdedys.github.io</title>
+    <!-- icons title -->
+    <link rel="shortcut icon" href="../../assets/img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .copyright {
+            background-color: #fff;
+        }
+        .copyright-item small {
+            display: flex;
+            height: 60px;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+        }
+        .copyright-item small a {
+            text-decoration: none;
+            color: #000;
+        }
+        .copyright-item small a:hover {
+            color: #434343;
+        }
+        .copyright small{
+            font-size: 16px;
+        }
+        /* Hidding sections under 960px width */
+        @media screen and (max-width: 600px) {
+            .copyright small{
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+  <body>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center" style="height: 85vh;">
+            <div class="col mt-5 mobile">
+                <h2 class="text-center mb-4" id="header">Selamat Datang</h2>
+                <input type="text" class="form-control mb-3 input-oval" id="searchBox" placeholder="Masukkan NIK">
+                <button class="btn btn-primary float-end mb-5 searchBtn rounded-pill" id="btnSearch" type="button">Cek Data</button>
+                <div id="results" class="mt-4"></div>
+            </div>
+            <div class="col notmobile">
+                <div class="text-center">
+                    <h1>Maaf harus di pakai hp</h1>
+                </div>
+            </div>
+        </div>
+        <!-- copyright start -->
+        <div class="copyright container-fluid">
+            <div class="copyright-item container">
+                <div class="row">
+                    <div class="col-md text-dark">
+                        <small>&copy;2026&nbsp;<a href="https://masdedys.github.io/">masdedys.github.io</a>, All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright end -->
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(".searchBtn").on("click", function () {
+     $.getJSON("js/list.json", function (data) {
+        //console.log(data);
+        var searchBox = document.getElementById('searchBox');
+        var results = document.getElementById('results');
+        var keyword = searchBox.value;
+        let anggota = data.anggota;
+        let content = "";
+
+        $.each(anggota, function (i, data) { 
+            if(data.nik==keyword){
+                content += 
+                '<table class="table table-striped-columns"><tr><th scope="row table-active">NIK</th><td>'+ 
+                    data.nik +'</td></tr><tr><th scope="row">Nama</th><td>'+ 
+                    data.nama +'</td></tr></table><table class="table table-striped"><thead><tr><th scope="col">Keanggotaan</th><th scope="col">Status</th></tr></thead><tbody><tr><th scope="row">'+
+                    data.keanggotaan +'</th><td>'+
+                    data.status +'</td></tr></tbody></table>';
+            return false;
+            }
+        });
+        //$("#results").html(content);
+        if (content) {
+            $('#header').remove();
+            $('#btnSearch').remove();
+            $('#searchBox').remove();
+            $("#results").html(content);
+        } else {
+            //location.reload();
+            //$("#results").empty();
+            content +='<b>Data tidak terdaftar dalam sistem</b>';
+            $("#results").html(content);
+        }
+    });
+});
+</script>
+<script>
+    const inputOval = document.getElementById('searchBox');
+
+inputOval.addEventListener('keydown', (event) => {
+    // Check if the pressed key is the 'Enter' key
+    if (event.key === 'Enter') {
+        $.getJSON("js/list.json", function (data) {
+        //console.log(data);
+        var searchBox = document.getElementById('searchBox');
+        var results = document.getElementById('results');
+        var keyword = searchBox.value;
+        let anggota = data.anggota;
+        let content = "";
+
+        $.each(anggota, function (i, data) { 
+            if(data.nik==keyword){
+                content += 
+                '<table class="table table-striped-columns"><tr><th scope="row table-active">NIK</th><td>'+ 
+                    data.nik +'</td></tr><tr><th scope="row">Nama</th><td>'+ 
+                    data.nama +'</td></tr></table><table class="table table-striped"><thead><tr><th scope="col">Keanggotaan</th><th scope="col">Status</th></tr></thead><tbody><tr><th scope="row">'+
+                    data.keanggotaan +'</th><td>'+
+                    data.status +'</td></tr></tbody></table>';
+            return false;
+            }
+        });
+        //$("#results").html(content);
+        if (content) {
+            //$('#searchBox').prop('disabled', true);
+            $('#header').remove();
+            $('#btnSearch').remove();
+            $('#searchBox').remove();
+            $("#results").html(content);
+        } else {
+            //location.reload();
+            //$("#results").empty();
+            content +='<b>Data tidak terdaftar dalam sistem</b>';
+            $("#results").html(content);
+        }
+    });
+        // Prevent the default form submission behavior (if inside a form)
+        event.preventDefault(); 
+    }
+});
+
+</script>
+</html>

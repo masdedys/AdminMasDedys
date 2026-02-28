@@ -8,8 +8,11 @@
 }
 .navbar {
   width: auto;
-  height: 50px;
+  height: 80px;
   background-color: #edc6c7;
+  display: flex;
+  /* justify-content: center;  */
+  align-items: center;
 }
 .carousel {
   width: auto;
@@ -150,4 +153,24 @@
     background-color: #12a9c8;
     clear: both;
   }
+}
+.copyright {
+  width: auto;
+  height: 70px;
+  background-color: #434343;
+  clear: both;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.copyright small {
+  font-size: 16px;
+  color: white;
+}
+.copyright small a {
+  color: white;
+  text-decoration: none;
+}
+.copyright small a:hover {
+  color: yellow;
 }

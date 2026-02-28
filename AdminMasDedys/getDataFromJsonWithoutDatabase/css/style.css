@@ -1,0 +1,22 @@
+.input-oval{
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Nilai besar untuk bentuk oval */
+    font-size: 16px;
+  }
+/* Hide by default (mobile first) */
+.notmobile {
+  display: none;
+}
+/* Show only on desktop */
+@media screen and (min-width: 768px) {
+  .notmobile {
+    display: block; /* or inline, flex, grid, etc. */
+  }
+  .mobile{
+    display: none;
+  }
+  .results {
+  display: none;
+}
+}

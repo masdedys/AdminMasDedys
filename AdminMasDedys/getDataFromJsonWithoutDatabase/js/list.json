@@ -1,0 +1,39 @@
+{
+  "anggota":[
+  {
+    "No.": "1",
+    "nik": "1",
+    "nama": "Agus",
+    "keanggotaan":"Ketua",
+    "status": "Non Aktif"
+  },
+  {
+    "No.": "2",
+    "nik": "2",
+    "nama": "Budi",
+    "keanggotaan":"Wakil Ketua  1",
+    "status": "Aktif"
+  },
+  {
+    "No.": "3",
+    "nik": "3",
+    "nama": "Candra",
+    "keanggotaan":"Bendahara",
+    "status": "Non Aktif"
+  },
+  {
+    "No.": "4",
+    "nik": "4",
+    "nama": "Dewi",
+    "keanggotaan":"Wakil Ketua 2",
+    "status": "Non Aktif"
+  },
+  {
+    "No.": "5",
+    "nik": "5",
+    "nama": "Eka",
+    "keanggotaan":"Anggota",
+    "status": "Aktif"
+  }
+]
+}
