@@ -1,6 +1,12 @@
 {
   "code": [
     {
+      "id": 8,
+      "name": "Graphic with moris.js",
+      "tech": "morris.js, PHP",
+      "view": "AdminMasDedys/graphicWithMorrisJS/index.php"
+    },
+    {
       "id": 7,
       "name": "Get data from JSON without database",
       "tech": "JavaScript",
@@ -33,7 +39,7 @@
     {
       "id": 3,
       "name": "Delete extension in URL",
-      "tech": "htaccess",
+      "tech": "htaccess, PHP",
       "view": "AdminMasDedys/deleteExtension/index.html"
     },
     {
@@ -44,9 +50,9 @@
     },
     {
       "id": 1,
-      "name": "MD5 Encryption With Bootstrap 5",
+      "name": "MD5 Encryption in PHP",
       "tech": "PHP, MD5",
-      "view": "AdminMasDedys/md5EncryptionWithBootstrap5/index.php"
+      "view": "AdminMasDedys/md5EncryptionInPHP/index.php"
     },
     {
       "id": 0,
