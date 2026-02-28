@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Barcode generator | masdedys.github.io</title>
+    <link rel="shortcut icon" href="../../assets/img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="metafloor-bwip-js-617f10b/dist/bwip-js-min.js"></script>
+    <style>
+        .copyright {
+            background-color: #fff;
+        }
+        .copyright-item small {
+            display: flex;
+            height: 60px;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+        }
+        .copyright-item small a {
+            text-decoration: none;
+            color: #000;
+        }
+        .copyright-item small a:hover {
+            color: #434343;
+        }
+        .copyright small{
+            font-size: 16px;
+        }
+        /* Hidding sections under 960px width */
+        @media screen and (max-width: 600px) {
+            .copyright small{
+                font-size: 14px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center" style="height: 85vh;">
+            <div class="col-md-6 text-center">
+                <h2>Barcode Generator with bwipjs</h2>
+                <div class="input-group my-5">
+                    <input type="text" class="form-control" placeholder="Input your text here" id="barcodeText">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="generateBarcode()">Generate</button>
+                </div>
+                <!-- Tempat Barcode dirender -->
+                <canvas id="myCanvas"></canvas><br>
+                <button class="btn btn-outline-secondary mt-3" id="downloadBtn" onclick="downloadBarcodepng()"><i class="bi bi-download"> .png</i></button>
+            </div>
+        </div>
+    </div>
+    <!-- copyright start -->
+      <div class="copyright container-fluid">
+            <div class="copyright-item container">
+                <div class="row">
+                    <div class="col-md text-dark">
+                        <small>&copy;2026&nbsp;<a href="https://masdedys.github.io/">masdedys.github.io</a>, All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+      </div>
+    <!-- copyright end -->
+    <script>
+      function generateBarcode() {
+        const text = document.getElementById('barcodeText').value;
+
+        if (!text) return alert("Masukkan teks terlebih dahulu!");
+
+        // Konfigurasi Barcode
+        bwipjs.toCanvas('myCanvas',{
+            bcid: 'qrcode',// Jenis barcode
+            text: text,// Teks yang dikodekan
+            scale: 5,// Faktor skala (ketebalan garis)
+            height: 10,// Opsional: Tinggi total dalam mm
+            width: 10,// Opsional: Lebar total dalam mm
+            paddingleft: 2,// Jarak/padding (opsional)
+            paddingright: 2, 
+            paddingtop: 2, 
+            paddingbottom:2,
+            includetext: true,// Menampilkan teks di bawah barcode
+            textxalign: 'center'// Posisi teks
+        }, function (err, cvs) {
+            if (err) {
+                console.error("Error generating barcode:", err);
+            } else {
+                console.log("Barcode generated successfully!");
+            }
+        });
+    }
+
+    function downloadBarcodepng() {
+        const canvas = document.getElementById('myCanvas');
+        const image = canvas.toDataURL("image/png").replace("image/png","image/octet-stream");
+        const link = document.createElement('a');
+        link.download = 'barcode.png';
+        link.href = image;
+        link.click();
+    }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

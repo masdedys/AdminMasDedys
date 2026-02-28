@@ -1,8 +1,14 @@
 {
   "code": [
     {
+      "id": 9,
+      "name": "Barcode Generator",
+      "tech": "bwipjs",
+      "view": "AdminMasDedys/barcodeGenerator/index.html"
+    },
+    {
       "id": 8,
-      "name": "Graphic with moris.js",
+      "name": "Chart",
       "tech": "morris.js, PHP",
       "view": "AdminMasDedys/graphicWithMorrisJS/index.php"
     },
