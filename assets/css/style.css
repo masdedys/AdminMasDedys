@@ -1,0 +1,28 @@
+.copyright {
+    background-color: #fff;
+}
+.copyright-item small {
+    display: flex;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+.copyright-item small a {
+    text-decoration: none;
+    color: #000;
+}
+.copyright-item small a:hover {
+    color: #434343;
+}
+.copyright small{
+    font-size: 16px;
+}
+/* Hidding sections under 960px width */
+@media screen and (max-width: 600px) {
+.copyright small{
+    font-size: 14px;
+    }
+}       

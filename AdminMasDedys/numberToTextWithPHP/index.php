@@ -6,36 +6,7 @@
     <title>Change number into text (Indonesia) | masdedys.github.io</title>
     <link rel="shortcut icon" href="../../assets/img/logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <style>
-        .copyright {
-            background-color: #fff;
-        }
-        .copyright-item small {
-            display: flex;
-            height: 60px;
-            padding: 0;
-            margin: 0;
-            justify-content: center;
-            align-items: center;
-            color: #000;
-        }
-        .copyright-item small a {
-            text-decoration: none;
-            color: #000;
-        }
-        .copyright-item small a:hover {
-            color: #434343;
-        }
-        .copyright small{
-            font-size: 16px;
-        }
-        /* Hidding sections under 960px width */
-        @media screen and (max-width: 600px) {
-            .copyright small{
-                font-size: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/style.css">
   </head>
   <body>
     <div class="container">

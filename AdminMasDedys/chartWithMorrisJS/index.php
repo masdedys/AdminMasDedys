@@ -14,49 +14,20 @@ $chartdata=substr($chartdata,0,-2);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphic with moris.js | masdedys.github.io</title>
+    <title>Chart | masdedys.github.io</title>
     <link rel="shortcut icon" href="../../assets/img/logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="morris.js-0.5.1/morris.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="morris.js-0.5.1/morris.min.js"></script>
-    <style>
-        .copyright {
-            background-color: #fff;
-        }
-        .copyright-item small {
-            display: flex;
-            height: 60px;
-            padding: 0;
-            margin: 0;
-            justify-content: center;
-            align-items: center;
-            color: #000;
-        }
-        .copyright-item small a {
-            text-decoration: none;
-            color: #000;
-        }
-        .copyright-item small a:hover {
-            color: #434343;
-        }
-        .copyright small{
-            font-size: 16px;
-        }
-        /* Hidding sections under 960px width */
-        @media screen and (max-width: 600px) {
-            .copyright small{
-                font-size: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center" style="height: 85vh;">
             <div class="col-md-8 text-center">
-                <h2>Graphic with moris.js</h2>      
+                <h2>Chart</h2>      
                 <div id="chart"></div>
             </div>
         </div>

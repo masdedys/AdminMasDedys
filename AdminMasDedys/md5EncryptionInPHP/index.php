@@ -9,36 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <style>
-        .copyright {
-            background-color: #fff;
-        }
-        .copyright-item small {
-            display: flex;
-            height: 60px;
-            padding: 0;
-            margin: 0;
-            justify-content: center;
-            align-items: center;
-            color: #000;
-        }
-        .copyright-item small a {
-            text-decoration: none;
-            color: #000;
-        }
-        .copyright-item small a:hover {
-            color: #434343;
-        }
-        .copyright small{
-            font-size: 16px;
-        }
-        /* Hidding sections under 960px width */
-        @media screen and (max-width: 600px) {
-            .copyright small{
-                font-size: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/style.css">
   </head>
   <body>
     <div class="container">

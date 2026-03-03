@@ -2,15 +2,15 @@
   "code": [
     {
       "id": 9,
-      "name": "Barcode Generator",
+      "name": "QRcode Generator",
       "tech": "bwipjs",
-      "view": "AdminMasDedys/barcodeGenerator/index.html"
+      "view": "AdminMasDedys/qrcodeGeneratorBwipJS/index.html"
     },
     {
       "id": 8,
       "name": "Chart",
       "tech": "morris.js, PHP",
-      "view": "AdminMasDedys/graphicWithMorrisJS/index.php"
+      "view": "AdminMasDedys/chartWithMorrisJS/index.php"
     },
     {
       "id": 7,
@@ -22,7 +22,7 @@
       "id": 7,
       "name": "Loading bar",
       "tech": "pace.js",
-      "view": "AdminMasDedys/loadingBar/index.html"
+      "view": "AdminMasDedys/loadingBarPaceJS/index.html"
     },
     {
       "id": 6,
@@ -40,7 +40,7 @@
       "id": 4,
       "name": "Copy text with one click",
       "tech": "clipboard.js",
-      "view": "AdminMasDedys/copyTextWithOneClick/index.html"
+      "view": "AdminMasDedys/copyTextWithOneClickClipboardJS/index.html"
     },
     {
       "id": 3,
