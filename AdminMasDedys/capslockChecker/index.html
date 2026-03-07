@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capslock Checker | masdedys.github.io</title>
+    <link rel="shortcut icon" href="../../assets/img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <style>
+       .d-one {
+        display: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center" style="height: 85vh;">
+        <div class="col-md-6">
+          <h2 class="text-center">Capslock Checker</h2>
+          <form action="" method="post" class="my-4">
+            <input type="text" class="form-control" name="" id="Input" placeholder="Input your text ..." />
+            <small id="Warning" class="text-danger d-one">Your Caps Lock is ON</small>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- copyright start -->
+      <div class="copyright container-fluid">
+            <div class="copyright-item container">
+                <div class="row">
+                    <div class="col-md text-dark">
+                        <small>&copy;2026&nbsp;<a href="https://masdedys.github.io/">masdedys.github.io</a>, All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+      </div>
+    <!-- copyright end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      var input = document.getElementById("Input");
+      var text = document.getElementById("Warning");
+
+      input.addEventListener("keyup", function (event) {
+        if (event.getModifierState("CapsLock")) {
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

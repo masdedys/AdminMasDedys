@@ -1,19 +1,61 @@
 {
   "code": [
     {
-      "id": 9,
+      "id": 17,
+      "name": "Search your text",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/searchYourText/index.html"
+    },
+    {
+      "id": 16,
+      "name": "Visible Invisible Password",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/visibleInvisiblePassword/index.html"
+    },
+    {
+      "id": 15,
+      "name": "Barcode Generator",
+      "tech": "JsBarcode",
+      "view": "AdminMasDedys/barcodeGeneratorJsBarcode/index.html"
+    },
+    {
+      "id": 14,
+      "name": "Capslock Checker",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/capslockChecker/index.html"
+    },
+    {
+      "id": 13,
+      "name": "Age Calculator",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/ageCalculator/index.html"
+    },
+    {
+      "id": 12,
+      "name": "Clock",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/clock/index.html"
+    },
+    {
+      "id": 11,
+      "name": "Input File with Drag and Drop",
+      "tech": "dropify",
+      "view": "AdminMasDedys/inputFileWithDragDropWithDropify/index.html"
+    },
+    {
+      "id": 10,
       "name": "QRcode Generator",
       "tech": "bwipjs",
       "view": "AdminMasDedys/qrcodeGeneratorBwipJS/index.html"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "Chart",
       "tech": "morris.js, PHP",
       "view": "AdminMasDedys/chartWithMorrisJS/index.php"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Get data from JSON without database",
       "tech": "JavaScript",
       "view": "AdminMasDedys/getDataFromJsonWithoutDatabase/index.html"
