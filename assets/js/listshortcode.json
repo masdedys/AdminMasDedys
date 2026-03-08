@@ -1,6 +1,48 @@
 {
   "code": [
     {
+      "id": 24,
+      "name": "Details Summary",
+      "tech": "html",
+      "view": "AdminMasDedys/detailAndSummary/index.html"
+    },
+    {
+      "id": 23,
+      "name": "Parallax",
+      "tech": "css",
+      "view": "AdminMasDedys/AdminMasDedys/parallax/index.html"
+    },
+    {
+      "id": 22,
+      "name": "Scroll Effect with GSAP",
+      "tech": "gsap",
+      "view": "AdminMasDedys/scrollEffectWithGSAP/index.html"
+    },
+    {
+      "id": 21,
+      "name": "Input Suggestion Box with Datalist",
+      "tech": "html",
+      "view": "AdminMasDedys/inputSuggestionBoxWithDatalist/index.html"
+    },
+    {
+      "id": 20,
+      "name": "Infinite Autoplay Carousel",
+      "tech": "css",
+      "view": "AdminMasDedys/infiniteAutoplayCarousel/index.html"
+    },
+    {
+      "id": 19,
+      "name": "Can't Right Click",
+      "tech": "html",
+      "view": "AdminMasDedys/cantRightClick/index.html"
+    },
+    {
+      "id": 18,
+      "name": "Signature Pad",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/signaturePad/index.html"
+    },
+    {
       "id": 17,
       "name": "Search your text",
       "tech": "JavaScript",
@@ -69,7 +111,7 @@
     {
       "id": 6,
       "name": "Image sprites",
-      "tech": "CSS",
+      "tech": "css",
       "view": "AdminMasDedys/imageSprites/index.html"
     },
     {
@@ -105,7 +147,7 @@
     {
       "id": 0,
       "name": "Basic Box Model",
-      "tech": "CSS",
+      "tech": "css",
       "view": "AdminMasDedys/basicBoxModel/index.html"
     }
   ]

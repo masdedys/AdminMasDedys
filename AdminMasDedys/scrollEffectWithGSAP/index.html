@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll effect with GSAP | masdedys.github.io</title>
+    <link rel="shortcut icon" href="../../assets/img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+      progress {
+        position: fixed;
+        z-index: 1;
+        bottom: 15px;
+        left: 0;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 8px;
+        border: none;
+        background: transparent;
+      }
+      progress::-webkit-progress-bar {
+        background: inherit;
+      }
+      progress::-webkit-progress-value {
+        background-color: #8f44fd;
+      }
+      .red {
+        background-color: red;
+        color: white;
+      }
+      .green {
+        background-color: green;
+        color: white;
+      }
+      .blue {
+        background-color: blue;
+        color: white;
+      }
+      .blue small{
+        font-size: 16px;
+      }
+      .blue small a{
+        text-decoration: none;
+        color: white;
+      }
+      .blue small a:hover{
+        color: #434343;
+      }
+      /* Hidding sections under 960px width */
+      @media screen and (max-width: 600px) {
+      .copyright small{
+          font-size: 14px;
+          }
+      }   
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md">
+          <progress max="100" value="0"></progress>
+        </div>
+      </div>
+      <div class="row red d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md text-center">
+          <h2>Scroll Effect with GSAP</h2>
+          <h3>Background Red</h3>
+        </div>
+      </div>
+      <div class="row green d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md text-center">
+          <h2>Scroll Effect with GSAP</h2>
+          <h3>Background Green</h3>
+        </div>
+      </div>
+      <div class="row blue d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md text-center">
+          <h2>Scroll Effect with GSAP</h2>
+          <h3>Background Blue</h3>
+          <small>&copy;2026&nbsp;<a href="https://masdedys.github.io/">masdedys.github.io</a>, All Rights Reserved</small>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <script>
+      // gsap.registerPlugin(ScrollTrigger);
+      // gsap.to("progress", {
+      //   value: 100,
+      //   scrollTrigger: {
+      //     scrub: 0.5,
+      //   },
+      // });
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to("progress", {
+        value: 100,
+        scrollTrigger: {
+          scrub: 0.5,
+        },
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  </body>
+</html>
