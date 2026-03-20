@@ -1,6 +1,24 @@
 {
   "code": [
     {
+      "id": 27,
+      "name": "Limit Your Words",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/limitYourWords/index.html"
+    },
+    {
+      "id": 26,
+      "name": "Calculator",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/calculator/index.html"
+    },
+    {
+      "id": 25,
+      "name": "Limit Your Character",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/limitYourCharacter/index.html"
+    },
+    {
       "id": 24,
       "name": "Details Summary",
       "tech": "html",
