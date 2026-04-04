@@ -1,6 +1,18 @@
 {
   "code": [
     {
+      "id": 29,
+      "name": "Organization Chart",
+      "tech": "OrgChart",
+      "view": "AdminMasDedys/organizationChartWithOrgChart/index.html"
+    },
+    {
+      "id": 28,
+      "name": "Chart",
+      "tech": "Chart.js",
+      "view": "AdminMasDedys/chartWithChartJS/index.html"
+    },
+    {
       "id": 27,
       "name": "Limit Your Words",
       "tech": "JavaScript",
@@ -111,8 +123,8 @@
     {
       "id": 9,
       "name": "Chart",
-      "tech": "morris.js, PHP",
-      "view": "AdminMasDedys/chartWithMorrisJS/index.php"
+      "tech": "Morris.js",
+      "view": "AdminMasDedys/chartWithMorrisJS/index.html"
     },
     {
       "id": 8,
