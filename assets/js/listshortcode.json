@@ -1,6 +1,12 @@
 {
   "code": [
     {
+      "id": 30,
+      "name": "Weather Map",
+      "tech": "OpenWeatherMap",
+      "view": "AdminMasDedys/weatherMap/index.html"
+    },
+    {
       "id": 29,
       "name": "Organization Chart",
       "tech": "OrgChart",
