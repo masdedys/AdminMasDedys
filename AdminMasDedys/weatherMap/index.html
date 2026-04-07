@@ -13,24 +13,21 @@
 
     <style>
         body{
-            background-image: url(../../assets/img/awan.jpg);
-            background-size: cover;
-            background-position: center center;
-            color: #1e1e1e;
-            /* display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0; */
+            /* background-image: url(../../assets/img/awan.jpg); */
+            background-color: #eaf1f4;
+            /* background-size: cover;
+            background-position: center center; */
+            color: #0c0c0c;
         }
         .card{
             margin-top: 1vh;
             padding: 4.5vh; 
             background: transparent;
-            border: 1px solid white;
+            border: 1px solid #eaf1f4;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            box-shadow:  23px 23px 45px #2540ac,
-             -23px -23px 45px #3156e8;
+            box-shadow:  23px 23px 45px #8cbcdc,
+             -23px -23px 45px #8cbcdc;
         }
         .weather_header{
             display: flex;
@@ -40,27 +37,27 @@
         input{
             border: none;
             outline: none;
-            color: white;
+            color: #0c0c0c;
             padding: 0.5rem 2rem;
             border-radius: 5px;
             background: transparent;
-            border: 1px solid white;
+            border: 1px solid #8cbcdc;
             backdrop-filter: blur(8px);
         }
         input:hover{
             border: none;
             outline: none;
-            color: #1e1e1e;
+            color: #0c0c0c;
             padding: 0.5rem 2rem;
             border-radius: 5px;
             background: white;
-            border: 1px solid #1e1e1e;
+            border: 1px solid #8cbcdc;
         }
         input::placeholder{
-            color: white;
+            color: #0c0c0c;
         }
         input:hover::placeholder{
-            color: #1e1e1e;
+            color: #0c0c0c;
         }
         .weather_search{
             position: relative;
@@ -70,14 +67,14 @@
             left: 10px;
             top: 15px;
             font-size: 15px;
-            color: white;
+            color: #0c0c0c;
         }
         .weather_search i:hover{
             position: absolute;
             left: 10px;
             top: 15px;
             font-size: 15px;
-            color: #1e1e1e;
+            color: #0c0c0c;
         }
         .weather_units{
             font-size: 1.5rem;
@@ -90,12 +87,12 @@
         }
         .weather_city{
             font-size: 1.5rem;
-            color: white;
+            color: #0c0c0c;
         }
         .weather_datetime{
             /* margin-bottom: 0rem; */
             font-size: 16px;
-            color: white;
+            color: #2f3640;
         }
         .weather_forecast{
             display: flex;
@@ -103,10 +100,11 @@
             gap: 0.5rem;
         }
         .weather_forecast p{
-            color: #fff;
+            background-color: #00a8ff;
+            color: white;
             margin-top: 0.3rem;
             padding: 0.2rem 1rem;
-            border: 1px solid white;
+            border: 1px solid #00a8ff;
             border-radius: 30px;
             display: flex;
             justify-content: center;
@@ -136,12 +134,12 @@
             /* display: flex; 
             align-items: center;*/
             background: transparent;
-            border: 1px solid #1e1e1e;
+            border: 2px solid #8cbcdc;
             border-radius: 20px;
             backdrop-filter: blur(8px);
             padding: 0.2rem;
             border-radius: 10px;
-            color: #1e1e1e;
+            color: #0c0c0c;
         }
         .weather_card div{
             justify-content: center;
@@ -153,23 +151,29 @@
             /* margin-right: 1rem;
             padding-left: 0.5rem; */
         }
-        .weather_card p{
-            font-size: 12px;
+        /* .weather_card p{
+            /* font-size: 14px; */
             /* padding-left: 0.5rem; */
+        } */
+        .weather_realfeel, 
+        .weather_humidity, 
+        .weather_wind, 
+        .weather_pressure{
+            font-size: 20px;
+            font-weight: 300;
         }
         .weather_footer{
             display: flex;
             justify-content: center;
             margin-top: 1rem;
-            color: white;
+            color: #0c0c0c;
         }
         .weather_footer small a{
-            color: white;
+            color: #0c0c0c;
             text-decoration: none;
         }
         .weather_footer small a:hover{
-            color: #1e1e1e;
-            text-decoration: none;
+            color: #8cbcdc;
         }
         /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 600px) {
@@ -189,6 +193,9 @@
         @media only screen and (min-width: 600px) {}
             .container .row .card{
                 width: 100%;
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */
             }
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {}
@@ -199,8 +206,9 @@
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
             .container .row .card{
-                width: 32em;
+                width: 36em;
             }
+
         }
     </style>
   </head>
