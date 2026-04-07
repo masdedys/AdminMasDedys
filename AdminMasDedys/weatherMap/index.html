@@ -22,7 +22,7 @@
         }
         .card{
             margin-top: 1vh;
-            padding: 4.5vh; 
+            padding: 3vh; 
             background: transparent;
             border: 1px solid #eaf1f4;
             border-radius: 20px;
@@ -98,24 +98,26 @@
         .weather_forecast{
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.2rem;
         }
         .weather_forecast p{
-            background-color: #00a8ff;
-            color: white;
-            margin-top: 0.3rem;
-            padding: 0.2rem 1rem;
-            border: 1px solid #00a8ff;
+            /* background-color: #00a8ff; */
+            color: #0c0c0c;
+            /* margin-top: 0.3rem; */
+            /* padding: 0.2rem 1rem; */
+            /* border: 1px solid #00a8ff; */
             border-radius: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .weather_icon img{
-            width: 50px;
+            width: 80px;
+            margin-top: 10px;
         }
         .weather_temperature{
             font-size: 1.5rem;
+            margin-top: 2rem;
         }
         .weather_minmax{
             display: flex;
@@ -176,6 +178,12 @@
         .weather_footer small a:hover{
             color: #8cbcdc;
         }
+        @media only screen and (max-width: 600px) {
+        .weather_temperature{
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    }
     </style>
   </head>
   <!--end::Head-->
@@ -199,13 +207,21 @@
             <div class="card-body weather_body">
                 <h2 class="weather_city"></h2>
                 <div class="weather_datetime"></div>
-                <div class="weather_forecast"></div>
-                <div class="weather_icon"></div>
-                    <p class="weather_temperature"></p>
-                    <div class="weather_minmax">
-                        <p>Min: 12&#176</p>
-                        <p>Max: 16&#176</p>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="weather_icon"></div>
+                        <div class="weather_forecast"></div>
                     </div>
+                    <div class="col-md">
+                        <p class="weather_temperature"></p>
+                        <div class="weather_minmax">
+                            <p>Min: 12&#176</p>
+                            <p>Max: 16&#176</p>
+                        </div>
+                    </div>
+                </div>
+                
+                    
                 <div class="row weather_info">
                     <div class="col-md weather_card">
                         <i class="fa-solid fa-temperature-full"></i>
@@ -291,7 +307,7 @@
                 weather_realfeel.innerHTML=`${data.main.feels_like.toFixed()}&#176;C`;
                 weather_humidity.innerHTML=`${data.main.humidity} %`;
                 weather_wind.innerHTML=`${data.wind.speed} ${units==="imperial" ? "mph": "m/s"}`;
-                weather_pressure.innerHTML=`${data.main.pressure}hPa`;
+                weather_pressure.innerHTML=`${data.main.pressure} hPa`;
 
             })
             search.value=""
