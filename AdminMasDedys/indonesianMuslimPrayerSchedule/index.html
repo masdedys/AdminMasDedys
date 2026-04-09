@@ -248,6 +248,12 @@
             if (!input.value) return;
             // Ganti URL ini dengan API Anda            
             const urlKota = `https://api.myquran.com/v3/sholat/kabkota/cari/${input.value}`;
+            const date = new Date();
+            let day = date.getDate();
+            let month = String(date.getMonth() + 1).padStart(2, '0');
+            let year = date.getFullYear();
+            let today = `${year}-${month}-${day}`;
+            console.log(today);
             fetch(urlKota)
             .then(res=>res.json())
             .then(data=>{
@@ -260,15 +266,15 @@
                     console.log(data);
                     document.getElementsByClassName('city')[0].innerHTML = data.data.kabko;
                     document.getElementsByClassName('prov')[0].innerHTML = data.data.prov;
-                    document.getElementsByClassName('datetime')[0].innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].tanggal;
-                    document.getElementById('imsak').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].imsak;
-                    document.getElementById('subuh').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].subuh;
-                    document.getElementById('terbit').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].terbit;
-                    document.getElementById('dhuha').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].dhuha;
-                    document.getElementById('dzuhur').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].dzuhur;
-                    document.getElementById('ashar').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].ashar;
-                    document.getElementById('maghrib').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].maghrib;
-                    document.getElementById('isya').innerHTML = data.data.jadwal[new Date().toISOString().split('T')[0]].isya;
+                    document.getElementsByClassName('datetime')[0].innerHTML = data.data.jadwal[`${today}`].tanggal;
+                    document.getElementById('imsak').innerHTML = data.data.jadwal[`${today}`].imsak;
+                    document.getElementById('subuh').innerHTML = data.data.jadwal[today].subuh;
+                    document.getElementById('terbit').innerHTML = data.data.jadwal[today].terbit;
+                    document.getElementById('dhuha').innerHTML = data.data.jadwal[today].dhuha;
+                    document.getElementById('dzuhur').innerHTML = data.data.jadwal[today].dzuhur;
+                    document.getElementById('ashar').innerHTML = data.data.jadwal[today].ashar;
+                    document.getElementById('maghrib').innerHTML = data.data.jadwal[today].maghrib;
+                    document.getElementById('isya').innerHTML = data.data.jadwal[today].isya;
                 })
                 search.value="";
             })
