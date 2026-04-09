@@ -1,6 +1,12 @@
 {
   "code": [
     {
+      "id": 31,
+      "name": "Indonesian Muslim Prayer Schedule",
+      "tech": "API Muslim Indonesia",
+      "view": "AdminMasDedys/indonesianMuslimPrayerSchedule/index.html"
+    },
+    {
       "id": 30,
       "name": "Weather Map",
       "tech": "OpenWeatherMap",
