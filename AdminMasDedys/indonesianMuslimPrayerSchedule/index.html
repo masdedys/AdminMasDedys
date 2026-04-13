@@ -49,7 +49,7 @@
             border: 1px solid #8cbcdc;
         }
         input::placeholder{
-            color: #0c0c0c;
+            color: grey;
         }
         input:hover::placeholder{
             color: #0c0c0c;
@@ -62,7 +62,7 @@
             left: 10px;
             top: 15px;
             font-size: 15px;
-            color: #0c0c0c;
+            color: grey;
         }
         .search i:hover{
             position: absolute;
@@ -136,7 +136,7 @@
             <div class="card-header">
                 <div class="header">
                     <form action="" class="search">
-                        <input type="text" name="kota" id="myInput" class="searchForm" placeholder="Cari daerah terdekat"/>
+                        <input type="text" name="kota" id="myInput" class="searchForm" placeholder="Cari di kota / kabupaten"/>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </form>
                 </div>
@@ -224,65 +224,37 @@
         </div>
         </div>
     </div>
-
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <script>
-            // Ganti URL ini dengan API Anda            
-            const note = `https://api.myquran.com/v3/sholat`;
-            fetch(note)
-            .then(res=>res.json())
-            .then(data=>{
-                console.log(data);
-                    document.getElementsByClassName('modal-title')[0].innerHTML = data.data.name;
-                    document.getElementById('desc').innerHTML = data.data.desc;
-                    document.getElementById('lastUpdate').innerHTML = data.data.last_update;
-                    document.getElementById('source').innerHTML = data.data.source;
-            })
+            // for modal            
+        const note = `https://api.myquran.com/v3/sholat`;
+        fetch(note)
+        .then(res=>res.json())
+        .then(data=>{
+        console.log(data);
+            document.getElementsByClassName('modal-title')[0].innerHTML = data.data.name;
+            document.getElementById('desc').innerHTML = data.data.desc;
+            document.getElementById('lastUpdate').innerHTML = data.data.last_update;
+            document.getElementById('source').innerHTML = data.data.source;
+    })
         
         document.querySelector(".search").addEventListener('submit',e=>{
-            const input = document.getElementById('myInput');
+            const inputvalue = document.getElementById('myInput');
             e.preventDefault(); 
-            if (!input.value) return;
-            // Ganti URL ini dengan API Anda            
-            const urlKota = `https://api.myquran.com/v3/sholat/kabkota/cari/${input.value}`;
-            const date = new Date();
-            let day = date.getDate();
-            let month = String(date.getMonth() + 1).padStart(2, '0');
-            let year = date.getFullYear();
-            let today = `${year}-${month}-${day}`;
-            console.log(today);
-            fetch(urlKota)
-            .then(res=>res.json())
-            .then(data=>{
-                //console.log(data);
-                const kota = data.data[0].id;
-                const urlWaktuSholat = `https://api.myquran.com/v3/sholat/jadwal/${kota}/today?tz=Asia%2FJakarta`;
-                fetch(urlWaktuSholat)
-                .then(res=>res.json())
-                .then(data=>{
-                    console.log(data);
-                    document.getElementsByClassName('city')[0].innerHTML = data.data.kabko;
-                    document.getElementsByClassName('prov')[0].innerHTML = data.data.prov;
-                    document.getElementsByClassName('datetime')[0].innerHTML = data.data.jadwal[`${today}`].tanggal;
-                    document.getElementById('imsak').innerHTML = data.data.jadwal[`${today}`].imsak;
-                    document.getElementById('subuh').innerHTML = data.data.jadwal[today].subuh;
-                    document.getElementById('terbit').innerHTML = data.data.jadwal[today].terbit;
-                    document.getElementById('dhuha').innerHTML = data.data.jadwal[today].dhuha;
-                    document.getElementById('dzuhur').innerHTML = data.data.jadwal[today].dzuhur;
-                    document.getElementById('ashar').innerHTML = data.data.jadwal[today].ashar;
-                    document.getElementById('maghrib').innerHTML = data.data.jadwal[today].maghrib;
-                    document.getElementById('isya').innerHTML = data.data.jadwal[today].isya;
-                })
-                search.value="";
-            })
+            if (!inputvalue.value) return;
+            input=inputvalue.value;
+            getPrayerSchedule();
+            inputvalue.value = '';
         });
-        
-        function getPrayerSchedule(){
-            const input = 'Jakarta';
-            // Ganti URL ini dengan API Anda            
+        function getPrayerScheduleDefault(){
+            input = 'Jakarta';
+            getPrayerSchedule();
+        }
+        function getPrayerSchedule(){   
+            //const input = 'Jakarta';      
             const urlKota = `https://api.myquran.com/v3/sholat/kabkota/cari/${input}`;
             const date = new Date();
             let day = date.getDate();
@@ -315,7 +287,7 @@
                 })
             })
         }
-        document.body.addEventListener('load',getPrayerSchedule())
+        document.body.addEventListener('load',getPrayerScheduleDefault())
     </script>
   </body>
   <!--end::Body-->
