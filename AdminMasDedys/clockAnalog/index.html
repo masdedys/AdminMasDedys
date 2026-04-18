@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Analog | masdedys.github.io</title>
+    <link rel="shortcut icon" href="../../assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" /> -->
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <!-- <link rel="stylesheet" href="../../assets/css/style.css"> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Courier New', Courier, monospace;
+        }
+        :root{
+            --primary-color:#f6f7fb;
+            --white-color:#fff;
+            --black-color:#18191a;
+            --red-color:#e74c3c;
+        }
+        body{
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background:var(--primary-color);
+        }
+        body.dark{
+            --primary-color:#242526;
+            --white-color:#fff;
+            --black-color:#18191a;
+            --red-color:#e74c3c;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+        .container .clock{
+            display: flex;
+            height: 350px;
+            width: 350px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            background: var(--white-color);
+            position: relative;
+        }
+        .clock label{
+            position: absolute;
+            inset: 15px;
+            text-align: center;
+            transform: rotate(calc(var(--i)*(360deg / 12)));
+        }
+        .clock label span{
+            display: inline-block;
+            font-size: 25px;
+            font-weight: 600;
+            color: var(--black-color);
+            transform: rotate(calc(var(--i)*(-360deg/12)));
+        }
+        .container .indicator{
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .indicator::before{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 4px solid var(--red-color);
+            background: var(--black-color);
+            z-index: 100;
+        }
+        .indicator .hand{
+            position: absolute;
+            height: 130px;
+            width: 4px;
+            bottom: 0;
+            border-radius: 25px;
+            transform-origin: bottom;
+            background: var(--red-color);
+        }
+        .hand.minute{
+            height: 120px;
+            width: 5px;
+            background: var(--black-color);
+        }
+        .hand.hour{
+            height: 100px;
+            width: 8px;
+            background: var(--black-color);
+        }
+        .mode-switch{
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            background: var(--black-color);
+            color: var(--white-color);
+            display: inline-block;
+            font-weight: 400;
+            font-size: 22px;
+        }
+        .mode-switch:active{
+            transform: scale(0.98);
+        }
+        .copyright span{
+            color: var(--white-color); 
+            mix-blend-mode:difference;
+        }
+        .copyright span a{
+            color: var(--white-color); 
+            mix-blend-mode:difference;
+            text-decoration: none;
+        }
+        .copyright span a:hover{
+            color: var(--red-color); 
+            mix-blend-mode:difference;
+            text-decoration: none;
+        }
+        .mobile{
+            color: var(--white-color); 
+            mix-blend-mode:difference;
+        }
+        @media only screen and (max-width: 600px) {
+        .container .clock, .container .copyright{
+            display: none;
+        }}
+        @media screen and (min-width: 1024px) {
+        .container .mobile{
+            display: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <label for="" style="--i:1"><span>1</span></label>
+            <label for="" style="--i:2"><span>2</span></label>
+            <label for="" style="--i:3"><span>3</span></label>
+            <label for="" style="--i:4"><span>4</span></label>
+            <label for="" style="--i:5"><span>5</span></label>
+            <label for="" style="--i:6"><span>6</span></label>
+            <label for="" style="--i:7"><span>7</span></label>
+            <label for="" style="--i:8"><span>8</span></label>
+            <label for="" style="--i:9"><span>9</span></label>
+            <label for="" style="--i:10"><span>10</span></label>
+            <label for="" style="--i:11"><span>11</span></label>
+            <label for="" style="--i:12"><span>12</span></label>
+
+        <div class="indicator">
+            <span class="hand hour"></span>
+            <span class="hand minute"></span>
+            <span class="hand second"></span>
+        </div>
+        </div>
+        <div class="mode-switch">dark mode</div>
+        <div class="copyright">
+            <span>&copy;2026&nbsp;<a href="https://masdedys.github.io/">masdedys.github.io</a>, All Rights Reserved</span>
+        </div>
+        <div class="mobile">
+            <p>Sorry, can't showing on mobile</p>    
+        </div>
+    </div>
+
+    <script>
+        const body=document.querySelector("body"),
+        hourHand=document.querySelector(".hour"),
+        minuteHand=document.querySelector(".minute"),
+        secondHand=document.querySelector(".second"),
+        modeSwitch=document.querySelector(".mode-switch");
+
+        if(localStorage.getItem("mode")=="dark mode"){
+            body.classList.add("dark");
+            modeSwitch.textContent="light mode";
+        }
+
+        modeSwitch.addEventListener("click",()=>{
+            body.classList.toggle("dark");
+            const isDarkMode=body.classList.contains("dark");
+            modeSwitch.textContent=isDarkMode ? "light mode" : "dark mode";
+            localStorage.setItem("mode",isDarkMode ? "dark mode" : "light mode")
+        })
+        const updateTime=()=>{
+            let date=new Date(),
+            secToDeg=(date.getSeconds()/60)*360,
+            minToDeg=(date.getMinutes()/60)*360,
+            hrToDeg=(date.getHours()/12)*360;
+
+            //console.log(secToDeg);
+            secondHand.style.transform=`rotate(${secToDeg}deg)`;
+            minuteHand.style.transform=`rotate(${minToDeg}deg)`;
+            hourHand.style.transform=`rotate(${hrToDeg}deg)`;
+        };
+        setInterval(updateTime,1000);
+        updateTime();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+</html>

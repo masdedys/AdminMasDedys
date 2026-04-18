@@ -1,6 +1,30 @@
 {
   "code": [
     {
+      "id": 34,
+      "name": "Simple Cashier",
+      "tech": "PHP, MySql",
+      "view": "AdminMasDedys/simpleCashier/index.php"
+    },
+    {
+      "id": 33,
+      "name": "Crud PHP",
+      "tech": "PHP",
+      "view": "AdminMasDedys/crudPHP/index.php"
+    },
+    {
+      "id": 33,
+      "name": "Clock Analog",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/clockAnalog/index.html"
+    },
+    {
+      "id": 32,
+      "name": "Captcha Generator",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/captcha/index.html"
+    },
+    {
       "id": 31,
       "name": "Indonesian Muslim Prayer Schedule",
       "tech": "API Muslim Indonesia",
