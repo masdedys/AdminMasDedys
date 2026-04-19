@@ -1,13 +1,19 @@
 {
   "code": [
     {
-      "id": 34,
+      "id": 36,
+      "name": "Generate Code",
+      "tech": "JavaScript",
+      "view": "AdminMasDedys/generateCode/index.html"
+    },
+    {
+      "id": 35,
       "name": "Simple Cashier",
       "tech": "PHP, MySql",
       "view": "AdminMasDedys/simpleCashier/index.php"
     },
     {
-      "id": 33,
+      "id": 34,
       "name": "Crud PHP",
       "tech": "PHP",
       "view": "AdminMasDedys/crudPHP/index.php"
@@ -140,7 +146,7 @@
     },
     {
       "id": 12,
-      "name": "Clock",
+      "name": "Clock Digital",
       "tech": "JavaScript",
       "view": "AdminMasDedys/clock/index.html"
     },
